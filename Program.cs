@@ -19,8 +19,8 @@ namespace CsharpTestApp
             newWarehouse.addItem(Item1);
             newWarehouse.addItem(Item2);
             newWarehouse.addItem(Item3);
-            newWarehouse.FindAndReturnItem(101);
-            newWarehouse.FindAndReturnItem(102);
+          //  newWarehouse.FindAndReturnItem(101);
+            newWarehouse.FindAndReturnItem(104);
         }
     }
 }

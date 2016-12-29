@@ -23,12 +23,23 @@ namespace CsharpTestApp
         {
             WarehouseArray.Add(thing);
         }
+        
         public Item FindAndReturnItem(int itemID)
         {
-
-            Item returnItem = WarehouseArray.Find(Item => Item.ID == itemID);
-            Console.WriteLine("{0} found", returnItem.Name);
-            return returnItem;
+            try
+            {
+                Item returnItem = WarehouseArray.Find(Item => Item.ID == itemID);
+                Console.WriteLine("{0} found", returnItem.Name);
+                return returnItem;
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine("item {0} not in stock", itemID);
+                Item nullItem = null;
+                return nullItem;
+            }
+            
+            
            
         }
     }
