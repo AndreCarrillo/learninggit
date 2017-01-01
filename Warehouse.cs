@@ -11,6 +11,8 @@ namespace CsharpTestApp
         public int ID { get; set; }
         public string WarehouseName { get; set; }
         private List<Item> WarehouseArray = new List<Item>();
+        private Dictionary<int, Item> myFirstDictionary = new Dictionary<int, Item>();
+
         
         public Warehouse(string Name, int ID)
         {

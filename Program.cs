@@ -12,15 +12,16 @@ namespace CsharpTestApp
 
         static void Main(string[] args)
         {
-            Warehouse newWarehouse = new Warehouse("houston Warehouse", 11101);
-            var Item1 = new Item(101, "Microsoft Word");
-            var Item2 = new Item(102, "Microsoft Excel");
-            var Item3 = new Item(103, "Microsoft Powerpoint");
-            newWarehouse.addItem(Item1);
-            newWarehouse.addItem(Item2);
-            newWarehouse.addItem(Item3);
-          //  newWarehouse.FindAndReturnItem(101);
-            newWarehouse.FindAndReturnItem(104);
+            var myComputer = new Computer();
+            myComputer.ID = 110;
+
+            Item mySecondComputer = new Computer();
+            mySecondComputer.ID = 111;
+            Computer mySecondComputer2 = mySecondComputer as Computer;
+            string myCPUType = mySecondComputer2.CPUType;
+            mySecondComputer2.Name = "Juniper";
+            mySecondComputer2.CPUType = "i5";
+            mySecondComputer2.Purchase();
         }
     }
 }
