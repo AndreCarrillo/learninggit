@@ -12,16 +12,23 @@ namespace CsharpTestApp
 
         static void Main(string[] args)
         {
-            var myComputer = new Computer();
-            myComputer.ID = 110;
+            /*  Dictionary<string, string> capitals = new Dictionary<string, string>();
+              capitals.Add("Alabama", "Montgomery");
+              capitals.Add("Alaska", "Juneau");
+              capitals.Add("Arizona", "Pheonix");
+              capitals.Add("Massachusetts", "Boston");
+              capitals.Add("Wyoming", "Cheyenne");
+              capitals.Add("Maryland", "Annapolis");
 
-            Item mySecondComputer = new Computer();
-            mySecondComputer.ID = 111;
-            Computer mySecondComputer2 = mySecondComputer as Computer;
-            string myCPUType = mySecondComputer2.CPUType;
-            mySecondComputer2.Name = "Juniper";
-            mySecondComputer2.CPUType = "i5";
-            mySecondComputer2.Purchase();
+              string capitalOfMass = capitals["Massachusetts"];
+              Console.WriteLine("The capital of Massachusetts is {0}", capitalOfMass);
+              string capitalOfMaryland = capitals["Maryland"];
+              Console.WriteLine("The capital of Maryland is {0}", capitalOfMaryland);
+              */
+            var theStates = State.GetStates();
+            int populationOfAlaska = theStates["Alaska"].Population;
+            Console.WriteLine("The population of Alaska is {0}", populationOfAlaska);
         }
+
     }
 }

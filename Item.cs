@@ -7,16 +7,30 @@ namespace CsharpTestApp
 {
     class Item
     {
-       public int ID { get; set;}
-       public string Name { get; set; }
-       public virtual void Purchase()
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public virtual void Purchase()
         {
             Console.WriteLine("Purchasing {0}", Name);
         }
+        public static Item GetItem()
+        {
+            var newItem = new Item();
+            newItem.ID = 0;
+            newItem.Name = "newItem";
+            return newItem;
+        }
     }
+    
+    
    class Software : Item
     {
         public string ISBN { get; set; }
+        public override void Purchase()
+        {
+            base.Purchase();
+            Console.WriteLine("ISBN is {0}", ISBN);
+        }
     }
 
     class Hardware : Item
@@ -31,7 +45,7 @@ namespace CsharpTestApp
         public override void Purchase()
         {
             base.Purchase();
-            Console.WriteLine("MyCPUType is {0}", CPUType);
+            Console.WriteLine("CPUType is {0}", CPUType);
         }
     }
 
